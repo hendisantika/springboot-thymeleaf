@@ -3,7 +3,7 @@ spring:
     name: Spring Boot With Thymeleaf Template Engine
   datasource:
     name: MySQL Connection Source
-    url: jdbc:mysql://localhost:3306/db-thymeleaf?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Jakarta&useSSL=false
+    url: jdbc:mysql://localhost:3306/dbThymeleaf?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Jakarta&useSSL=false
     username: root
     password: root
   jpa:
