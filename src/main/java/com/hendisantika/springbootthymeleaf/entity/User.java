@@ -19,7 +19,7 @@ import java.util.Date;
  * Time: 12.03
  */
 @Entity
-@Table(name = "user")
+@Table(name = "tbl_user")
 @DynamicInsert
 @DynamicUpdate
 public class User implements Serializable {

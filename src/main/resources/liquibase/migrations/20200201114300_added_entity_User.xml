@@ -15,8 +15,8 @@
     <property name="floatType" value="float" dbms="mysql, oracle"/>
 
     <!-- Create User table -->
-    <changeSet id="20190209194300" author="hedza06" context="dev, prod">
-        <createTable tableName="user">
+    <changeSet id="20190209194300" author="hendisantika" context="dev, prod">
+        <createTable tableName="tbl_user">
             <column name="id" type="int" autoIncrement="${autoIncrement}">
                 <constraints nullable="false" primaryKey="true"/>
             </column>
@@ -38,7 +38,7 @@
             <column name="password" type="varchar(64)">
                 <constraints nullable="false"/>
             </column>
-            <column name="created_at" type="datetime" defaultValueDate="${now}">
+            <column name="created_at" type="datetime" defaultValueDate="current_timestamp">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -47,7 +47,7 @@
         <loadData encoding="UTF-8"
                   file="../seeds/users.csv"
                   separator=";"
-                  tableName="user"
+                  tableName="tbl_user"
                   relativeToChangelogFile="true"/>
 
     </changeSet>
