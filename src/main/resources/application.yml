@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: Spring Boot With Thymeleaf Template Engine
+  datasource:
+    name: MySQL Connection Source
+    url: jdbc:mysql://localhost:3306/db-thymeleaf?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Jakarta&useSSL=false
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+    database: MYSQL
+    show_sql: true
+    properties:
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: true
+  liquibase:
+    change-log: classpath:liquibase/master.xml
+server:
+  port: 8080
+debug: false
