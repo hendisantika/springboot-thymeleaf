@@ -7,6 +7,6 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
 
     <!-- Migrations -->
-    <include file="migrations/20200201114300_added_entity_User.xml" relativeToChangelogFile="true"/>
-
+    <!--    <include file="migrations/20200201114300_added_entity_User.xml" relativeToChangelogFile="true"/>-->
+    <includeAll path="migrations/" relativeToChangelogFile="true"/>
 </databaseChangeLog>
