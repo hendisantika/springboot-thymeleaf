@@ -1,8 +1,14 @@
 package com.hendisantika.springbootthymeleaf.controller;
 
+import com.hendisantika.springbootthymeleaf.constant.TemplateConstant;
+import com.hendisantika.springbootthymeleaf.entity.User;
 import com.hendisantika.springbootthymeleaf.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,4 +24,12 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @GetMapping(value = "/users")
+    public String getAllUsers(Model model) {
+        List<User> users = userService.findAll();
+        model.addAttribute("users", users);
+
+        return TemplateConstant.ALL_USERS;
+    }
 }
